@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+.rectangulo-total {
+    width: 100%;         /* Ocupa todo el ancho */
+    background-color: #fff2f2; /* Color del rectángulo */
+    color: rgb(253, 79, 79);        /* Color del texto */
+    padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
+    text-align: center;  /* Centra el texto horizontalmente */
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+.contenido {
+    padding: 0 20px;
+}
+
+.seccion-razones {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+
+}
+
+.seccion-razones h2 {
+    font-size: 1.5rem;
+    color: #403f3f;
+    margin-bottom: 60px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+
+.lista-razones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Se adapta al tamaño de pantalla */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cada tarjeta individual */
+.tarjeta-razon {
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;         /* ESTO alinea emoji y texto de lado */
+    align-items: center;   /* Centra el emoji verticalmente con el texto */
+    gap: 15px;             /* El espacio exacto entre el emoji y el texto */
+    transition: all 0.3s ease;
+    border: 1px solid #ffeaea;
+}
+
+.tarjeta-razon:hover {
+    transform: translateY(-10px); /* Salta un poco hacia arriba */
+    background: #ffffff;
+    border-color: #fb5f5f;
+    box-shadow: 0 10px 25px rgba(255, 77, 77, 0.2);
+}
+
+.emoji {
+    font-size: 1.5rem;     /* Un poco más pequeño para que no descuadre */
+    display: inline-block; /* Ahora se comporta como parte de la línea */
+    margin-bottom: 0;      /* Quitamos el margen que lo empujaba antes */
+}
+
+.tarjeta-razon p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}

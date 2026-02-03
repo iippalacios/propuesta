@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+.rectangulo-total {
+    width: 100%;         /* Ocupa todo el ancho */
+    background-color: #fff2f2; /* Color del rectángulo */
+    color: rgb(253, 79, 79);        /* Color del texto */
+    padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
+    text-align: center;  /* Centra el texto horizontalmente */
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+.contenido {
+    padding: 0 20px;
+}
+
+.contenedor-secciones {
+    display: flex;
+    flex-direction: row; /* Fuerza horizontal */
+    flex-wrap: nowrap;   /* Prohibe que las cajas bajen */
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+.caja-seccion {
+    flex: 1;             /* Divide el ancho en 3 partes iguales */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+}
+
+.caja-seccion:hover{
+    filter: brightness(1.1);
+}
+
+.color1 { background-color: #ff270f; }
+.color2 { background-color: #ff6d6d; }
+.color3 { background-color: #ffbfbf; }
+
+.contenedor-boton {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 180px 0px; /* Espacio arriba y abajo */
+}
+
+.boton-arcoiris {
+    display: inline-block;
+    width: auto;           /* Asegura que no fuerce el 100% */
+    max-width: 450px;      /* Le pones un tope de ancho (ajusta el número a tu gusto) */
+    margin: auto;
+    padding: 15px 40px;
+    font-size:1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+
+    /* Fondo con degradado animado */
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 800% 800%;
+    
+    /* Animación */
+    animation: cambioColores 5s ease infinite;
+    
+    /* Sombra elegante */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.boton-arcoiris:hover {
+    transform: scale(1.1); /* Se hace un pelín más grande al pasar el ratón */
+}
+
+.texto-carga {
+    font-family: 'Courier New', Courier, monospace; /* Estilo tipo consola/carga */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* Animación opcional para que el texto parpadee como si cargara */
+    animation: parpadeo 1.5s infinite;
+    margin-top: 30px;
+}
+
+/* Definición de la animación de colores */
+@keyframes cambioColores {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

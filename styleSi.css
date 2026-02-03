@@ -1,0 +1,43 @@
+/* Configuración de la página de confirmación */
+.body-animacion {
+    margin: 0;
+    overflow: hidden; /* Evita que aparezca scroll mientras caen los corazones */
+    background-color: #fff2f2; /* Color suave de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo de la fecha central */
+.fecha-final {
+    text-align: center;
+    z-index: 10; /* Para que esté por encima de los corazones */
+    background: white;
+    padding: 30px 60px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.fecha-final h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 3rem;
+    color: #fd4f4f;
+    margin: 0;
+}
+
+/* Los corazones que caen */
+.heart {
+    position: fixed;
+    top: -50px;
+    font-size: 2rem;
+    user-select: none;
+    pointer-events: none;
+    animation: caer linear forwards;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}

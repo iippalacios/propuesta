@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+.rectangulo-total {
+    width: 100%;         /* Ocupa todo el ancho */
+    background-color: #fff2f2; /* Color del rectángulo */
+    color: rgb(253, 79, 79);        /* Color del texto */
+    padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
+    text-align: center;  /* Centra el texto horizontalmente */
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+.contenido {
+    padding: 0 20px;
+}
+
+.nosotros{
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.nosotros h2 {
+    font-size: 1.5rem;
+    color: #403f3f;
+    margin-bottom: 60px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+.nosotros p {
+    font-size: 1rem;
+    color: #403f3f;
+    margin-bottom: 0px;
+    font-family: 'Georgia', serif;
+    padding-left: 180px;
+    padding-right: 180px;
+    text-align: center;
+    text-align: justify;
+}
+
+.contenedorfototexto {
+    display: flex;
+    align-items: center;    /* Centra verticalmente foto y texto */
+    justify-content: center; /* Centra el contenido en la página */
+    gap: 0;                 /* Quitamos el gap para controlar el espacio con padding */
+    max-width: 1000px;      /* Ancho total de la sección */
+    margin: 50px auto;      /* Centra el bloque entero en la pantalla */
+    margin-top: 20px;
+}
+
+/* Columna de la Izquierda (Foto) */
+.foto {
+    flex: 1;                /* Ocupa exactamente el 50% */
+    display: flex;
+    justify-content: flex-end; /* Empuja la foto hacia el centro */
+    padding-right: 30px;    /* Este es el espacio real de separación */
+}
+
+/* Columna de la Derecha (Texto) */
+.texto {
+    flex: 1;                /* Ocupa exactamente el 50% */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Empuja el texto hacia el centro */
+    padding-left: 30px;     /* Este es el espacio real de separación */
+    text-align: center;
+}
+
+/* Ajuste de la Imagen para que no se descontrole */
+.foto img {
+    max-width: 480px;       /* Tamaño máximo de la foto */
+    width: 100%;
+    height: auto;
+    border: 12px solid #a67c52;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .contenedor-bi-columna {
+        flex-direction: column;
+    }
+    .foto-lado, .texto-lado {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}

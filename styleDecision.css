@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+.rectangulo-total {
+    width: 100%;         /* Ocupa todo el ancho */
+    background-color: #fff2f2; /* Color del rectángulo */
+    color: rgb(253, 79, 79);        /* Color del texto */
+    padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
+    text-align: center;  /* Centra el texto horizontalmente */
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+.contenido {
+    padding: 0 20px;
+}
+
+.contenedorfototexto {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 180px 0px; /* Espacio arriba y abajo */
+}
+
+.texto {
+    display: inline-block;
+    width: auto;
+    max-width: 450px;
+    margin: auto;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    background: rgb(15, 15, 15);
+
+    /* 1. ACTIVAR LA ANIMACIÓN */
+    /* nombre | duración | ritmo | repetición */
+    animation: parpadeo 1.5s ease-in-out infinite;
+}
+
+/* 2. DEFINIR EL PARPADEO */
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;   /* Se vuelve un poco transparente */
+        transform: scale(0.98); /* Se encoge un pelín para dar efecto de latido */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.doble-botones{
+    display: flex;
+    align-items: center;    /* Centra verticalmente foto y texto */
+    justify-content: center; /* Centra el contenido en la página */
+    gap: 0;                 /* Quitamos el gap para controlar el espacio con padding */
+    max-width: 1000px;      /* Ancho total de la sección */
+    margin: 50px auto;      /* Centra el bloque entero en la pantalla */
+    margin-top: 20px;
+}
+
+.boton{
+    display: inline-block;
+    width: auto;           /* Asegura que no fuerce el 100% */
+    max-width: 450px;      /* Le pones un tope de ancho (ajusta el número a tu gusto) */
+    margin: auto;
+    padding: 15px 40px;
+    font-size:1.2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 50px;
+
+    background: rgb(181, 255, 70);
+    background-size: 800% 800%;
+}
+
+#botonNo {
+    background: #fa5f5f; /* Gris clarito para que parezca "menos importante" */
+    color: #ffffff;
+    animation: none;  /* Sin colores para el NO */
+    box-shadow: none;
+}

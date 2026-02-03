@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nos vemos pronto!</title>
+    <link rel="stylesheet" href="styleSi.css">
+</head>
+<body class="body-animacion">
+
+    <div class="fecha-final">
+        <h1>22.02.2026</h1>
+        <p>TE QUIERO PARA TODA UNA VIDA RUBITA</p>
+    </div>
+
+    <script>
+        function crearCorazon() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            
+            // Posición horizontal aleatoria
+            heart.style.left = Math.random() * 100 + "vw";
+            // Velocidad de caída aleatoria
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            
+            heart.innerText = "❤️"; // Usamos el emoji directamente
+            document.body.appendChild(heart);
+
+            // Se borra el corazón después de caer para no saturar la PC
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // Crea un corazón cada 200 milisegundos
+        setInterval(crearCorazon, 10);
+    </script>
+</body>
+</html>
