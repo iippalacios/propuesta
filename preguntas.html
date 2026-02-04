@@ -51,6 +51,25 @@
     </div>
 
     <script src="funciones.js"></script>
+
+    <audio id="musicaFondo" loop>
+        <source src="Thousand-Years.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function comenzarTodo() {
+            const audio = document.getElementById('musicaFondo');
+        
+            // 1. Guardamos en la memoria que debe sonar en las siguientes páginas
+            localStorage.setItem('musicaSonando', 'true');
+        
+            // 2. Arrancamos el audio
+            audio.play().then(() => {
+            // 3. Cuando la música ya suena, nos vamos a la siguiente página
+            window.location.href = "preguntas.html";
+            });
+        }
+    </script>
 </body>
 
 </html>

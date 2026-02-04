@@ -14,6 +14,21 @@
         <p class="mensaje-triste">GRACIAS POR TANTO Y PERDÓN POR TAN POCO</p>
         <a href="index.html" class="boton-volver">RETIRO ESPIRITUAL</a>
     </div>
+
+    <audio id="musicaFondo" loop>
+    <source src="Thousand-Years.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    window.onload = function() {
+        if (localStorage.getItem('musicaSonando') === 'true') {
+            const audio = document.getElementById('musicaFondo');
+            const savedTime = localStorage.getItem('tiempoMusica');
+            if (savedTime) audio.currentTime = parseFloat(savedTime);
+            audio.play();
+        }
+    };
+</script>
 </body>
 
 </html>

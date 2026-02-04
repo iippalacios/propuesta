@@ -11,8 +11,31 @@
     <div class="contenedor-transicion">
         <h1 class="texto-animado">AÚN QUEDA UNA ÚLTIMA PREGUNTA</h1>
         
-        <a href="decision.html" class="boton-continuar">¿ESTÁS PREPRADA?</a>
+        <a href="decision.html" class="boton-continuar" onclick="reproducirYGuardar(event)">¿ESTÁS PREPARADA?</a>
     </div>
+
+    <audio id="musicaFondo" loop>
+    <source src="Thousand-Years.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const audio = document.getElementById('musicaFondo');
+
+    window.onload = function() {
+        if (localStorage.getItem('musicaSonando') === 'true') {
+            // Recuperar el tiempo donde se quedó
+            const savedTime = localStorage.getItem('tiempoMusica');
+            if (savedTime) audio.currentTime = parseFloat(savedTime);
+            audio.play();
+        }
+    };
+
+    // Función para el botón "CONTINUAR" de esta página
+    document.querySelector('.boton-continuar').addEventListener('click', function(e) {
+        // Guardamos el segundo exacto antes de saltar a decision.html
+        localStorage.setItem('tiempoMusica', audio.currentTime);
+    });
+</script>
 
 </body>
 </html>

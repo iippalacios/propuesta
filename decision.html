@@ -26,6 +26,29 @@
         <a href = "no.html" class="boton" id="botonNo">NO</a>
     </div>
 
+    <audio id="musicaFondo" loop>
+    <source src="Thousand-Years.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const audio = document.getElementById('musicaFondo');
+
+    window.onload = function() {
+        if (localStorage.getItem('musicaSonando') === 'true') {
+            const savedTime = localStorage.getItem('tiempoMusica');
+            if (savedTime) audio.currentTime = parseFloat(savedTime);
+            audio.play();
+        }
+    };
+
+    // Al pulsar SI o NO, guardamos el tiempo para la siguiente página
+    document.querySelectorAll('.boton').forEach(boton => {
+        boton.addEventListener('click', () => {
+            localStorage.setItem('tiempoMusica', audio.currentTime);
+        });
+    });
+</script>
+
 </body>
 
 </html>
