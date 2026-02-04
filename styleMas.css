@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('rs.jpeg');
+    background-size: cover;       /* Estira la imagen para cubrir toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen si es pequeña */
+    background-attachment: fixed; /* La imagen se queda quieta al fondo */
+    background-color: #fff2f2; /* Color suave de fondo */
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Opcional: añade padding para que el texto no toque los bordes de la foto */
+    padding: 40px;
+}
+
+.rectangulo-total {
+    width: 100%;         /* Ocupa todo el ancho */
+    background-color: rgba(72, 215, 255, 0.294);
+    background-size: cover;
+    border-radius: 20px;
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Opcional: añade padding para que el texto no toque los bordes de la foto */
+    padding: 40px;
+    
+    /* Opcional: cambia el color del texto para que contraste con la foto */
+    color: rgba(255, 78, 78, 0.649);
+    
+    /* Opcional: elimina márgenes si quieres que pegue con el borde */
+    margin: 0;
+    color: rgb(255, 97, 97);        /* Color del texto */
+    padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
+    text-align: center;  /* Centra el texto horizontalmente */
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+.texto p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-align: center;
+    background-size: cover;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .contenedor-bi-columna {
+        flex-direction: column;
+    }
+    .foto-lado, .texto-lado {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        /* Ajusta el tamaño de la letra para que no se amontone */
+        font-size: 1.5rem; 
+        
+        /* Asegura que la imagen se vea completa */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        
+        /* Reduce el espacio interno si es necesario */
+        padding: 20px;
+    }
+
+    .contenido {
+        /* Evita que el contenedor tenga márgenes laterales demasiado grandes */
+        width: 100%;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('valentines-day-postcard-with-gift-heart-shape-roses-candles-white-background.jpg');
+    font-family: sans-serif;
+    background-size: cover;
+}
+
+.contenedor-transicion {
+    text-align: center;
+}
+
+.texto-animado {
+
+    color: rgb(255, 31, 31);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+    /* Animación de entrada de izquierda a derecha */
+    animation: aparecerDerecha 1.5s ease-out forwards;
+}
+
+.boton-continuar {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff686d;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* HACEMOS QUE EL BOTÓN APAREZCA DESPUÉS */
+    opacity: 0;
+    animation: aparecerBoton 1s ease-out forwards;
+    animation-delay: 1.5s; /* Empieza cuando el texto termina */
+    
+    transition: transform 0.2s;
+}
+
+.boton-continuar:hover {
+    transform: scale(1.1);
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecerDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecerBoton {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .contenedor-bi-columna {
+        flex-direction: column;
+    }
+    .foto-lado, .texto-lado {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        /* Ajusta el tamaño de la letra para que no se amontone */
+        font-size: 1.5rem; 
+        
+        /* Asegura que la imagen se vea completa */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        
+        /* Reduce el espacio interno si es necesario */
+        padding: 20px;
+    }
+
+    .contenido {
+        /* Evita que el contenedor tenga márgenes laterales demasiado grandes */
+        width: 100%;
+        padding: 10px;
+    }
+}

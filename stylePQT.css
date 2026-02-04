@@ -2,13 +2,34 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #ffffff;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('sobre-nubes.jpg');
+    background-size: cover;
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Opcional: añade padding para que el texto no toque los bordes de la foto */
+    padding: 40px;
 }
 
 .rectangulo-total {
     width: 100%;         /* Ocupa todo el ancho */
-    background-color: #fff2f2; /* Color del rectángulo */
-    color: rgb(253, 79, 79);        /* Color del texto */
+    background-color: rgba(255, 255, 255, 0.3);
+    background-size: cover;
+    border-radius: 20px;
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Opcional: añade padding para que el texto no toque los bordes de la foto */
+    padding: 40px;
+    
+    /* Opcional: cambia el color del texto para que contraste con la foto */
+    color: rgb(78, 217, 255);
+    
+    /* Opcional: elimina márgenes si quieres que pegue con el borde */
+    margin: 0;
+    color: rgb(60, 49, 255);        /* Color del texto */
     padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
     text-align: center;  /* Centra el texto horizontalmente */
     font-family: 'Times New Roman';
@@ -21,14 +42,13 @@ body {
 
 .seccion-razones {
     padding: 60px 20px;
-    background-color: #ffffff;
     text-align: center;
 
 }
 
 .seccion-razones h2 {
     font-size: 1.5rem;
-    color: #403f3f;
+    color: #000000;
     margin-bottom: 60px;
     font-family: 'Georgia', serif;
     font-weight: bold;
@@ -73,4 +93,35 @@ body {
     line-height: 1.6;
     font-size: 1rem;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .contenedor-bi-columna {
+        flex-direction: column;
+    }
+    .foto-lado, .texto-lado {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        /* Ajusta el tamaño de la letra para que no se amontone */
+        font-size: 1.5rem; 
+        
+        /* Asegura que la imagen se vea completa */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        
+        /* Reduce el espacio interno si es necesario */
+        padding: 20px;
+    }
+
+    .contenido {
+        /* Evita que el contenedor tenga márgenes laterales demasiado grandes */
+        width: 100%;
+        padding: 10px;
+    }
 }

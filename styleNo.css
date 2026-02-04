@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Fondo oscuro dramático */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    overflow: hidden; /* Evita que aparezcan barras de scroll */
+}
+
+.contenedor-triste {
+    text-align: center;
+}
+
+.corazon-roto {
+    font-size: 350px; /* Tamaño GIGANTE */
+    line-height: 1;
+    filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.4));
+    animation: latidoRoto 2.5s ease-in-out infinite;
+    user-select: none; /* Para que no se pueda seleccionar el emoji como texto */
+}
+
+.mensaje-triste {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+.boton-volver {
+    display: inline-block;
+    margin-top: 40px;
+    color: #888;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.boton-volver:hover {
+    color: #ff4d4d;
+}
+
+/* Animación de latido lento y triste */
+@keyframes latidoRoto {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .contenedor-bi-columna {
+        flex-direction: column;
+    }
+    .foto-lado, .texto-lado {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        /* Ajusta el tamaño de la letra para que no se amontone */
+        font-size: 1.5rem; 
+        
+        /* Asegura que la imagen se vea completa */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        
+        /* Reduce el espacio interno si es necesario */
+        padding: 20px;
+    }
+
+    .contenido {
+        /* Evita que el contenedor tenga márgenes laterales demasiado grandes */
+        width: 100%;
+        padding: 10px;
+    }
+}

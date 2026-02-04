@@ -2,13 +2,35 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #ffffff;
+    background-size: cover;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('valentines-day-postcard-with-gift-heart-shape-roses-candles-white-background.jpg');
+
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Opcional: añade padding para que el texto no toque los bordes de la foto */
+    padding: 40px;
 }
 
 .rectangulo-total {
     width: 100%;         /* Ocupa todo el ancho */
-    background-color: #fff2f2; /* Color del rectángulo */
-    color: rgb(253, 79, 79);        /* Color del texto */
+    background-color: rgba(255, 185, 185, 0.294);
+    background-size: cover;
+    border-radius: 20px;
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Opcional: añade padding para que el texto no toque los bordes de la foto */
+    padding: 40px;
+    
+    /* Opcional: cambia el color del texto para que contraste con la foto */
+    color: rgba(255, 78, 78, 0.649);
+    
+    /* Opcional: elimina márgenes si quieres que pegue con el borde */
+    margin: 0;
+    color: rgb(255, 2, 2);        /* Color del texto */
     padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
     text-align: center;  /* Centra el texto horizontalmente */
     font-family: 'Times New Roman';
@@ -21,7 +43,6 @@ body {
 
 .nosotros{
     padding: 60px 20px;
-    background-color: #ffffff;
     text-align: center;
 }
 
@@ -31,24 +52,33 @@ body {
     margin-bottom: 60px;
     font-family: 'Georgia', serif;
     font-weight: bold;
+    background-color: #ffffffbe;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .nosotros p {
     font-size: 1rem;
-    color: #403f3f;
+    color: #000000;
     margin-bottom: 0px;
     font-family: 'Georgia', serif;
-    padding-left: 180px;
-    padding-right: 180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     text-align: justify;
+    background-color: #ffffffbe;
+    background-size: cover;
+    border-radius: 20px;
 }
 
 .contenedorfototexto {
     display: flex;
     align-items: center;    /* Centra verticalmente foto y texto */
     justify-content: center; /* Centra el contenido en la página */
-    gap: 0;                 /* Quitamos el gap para controlar el espacio con padding */
+    gap: 60px;                 /* Quitamos el gap para controlar el espacio con padding */
     max-width: 1000px;      /* Ancho total de la sección */
     margin: 50px auto;      /* Centra el bloque entero en la pantalla */
     margin-top: 20px;
@@ -69,7 +99,14 @@ body {
     flex-direction: column;
     justify-content: flex-start; /* Empuja el texto hacia el centro */
     padding-left: 30px;     /* Este es el espacio real de separación */
-    text-align: center;
+    text-align: justify;
+    background-color: #ffffffbe;
+    background-size: cover;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* Ajuste de la Imagen para que no se descontrole */
@@ -94,5 +131,25 @@ body {
         padding: 20px;
         justify-content: center;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        /* Ajusta el tamaño de la letra para que no se amontone */
+        font-size: 1.5rem; 
+        
+        /* Asegura que la imagen se vea completa */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        
+        /* Reduce el espacio interno si es necesario */
+        padding: 20px;
+    }
+
+    .contenido {
+        /* Evita que el contenedor tenga márgenes laterales demasiado grandes */
+        width: 100%;
+        padding: 10px;
     }
 }

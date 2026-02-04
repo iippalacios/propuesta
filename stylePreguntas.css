@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    /* 1. CONFIGURACIÓN DEL FONDO */
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('montaña.jpg');
+    background-size: cover;       /* Estira la foto para cubrir todo sin deformar */
+    background-position: center;  /* Centra la imagen siempre */
+    background-attachment: fixed; /* La foto no se mueve al hacer scroll */
+    background-repeat: no-repeat; /* Evita que la foto se duplique */
+
+    /* 2. EL TRUCO PARA TODA LA PANTALLA */
+    min-height: 100vh;           /* Altura mínima: 100% de la pantalla visible */
+    
+    /* 3. CENTRADO DEL CONTENIDO (Opcional pero recomendado) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.rectangulo-total {
+    width: 100%;         /* Ocupa todo el ancho */
+    background-color: rgba(250, 205, 79, 0.294);
+    background-size: cover;
+    border-radius: 20px;
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Opcional: añade padding para que el texto no toque los bordes de la foto */
+    padding: 40px;
+    
+    /* Opcional: cambia el color del texto para que contraste con la foto */
+    color: rgb(255, 234, 139); 
+    
+    /* Opcional: elimina márgenes si quieres que pegue con el borde */
+    margin: 0;
+    color: rgb(84, 49, 28);        /* Color del texto */
+    padding: 40px 0;    /* Espacio arriba y abajo dentro del rectángulo */
+    text-align: center;  /* Centra el texto horizontalmente */
+    font-family: 'Times New Roman';
+    font-weight: bold;
+}
+
+.contenedor-quiz {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 2px;
+}
+
+.bloque-pregunta {
+    margin-bottom: 2px;
+    text-align: center;
+    /*background: #fffcfc;*/
+    padding: 1px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.bloque-pregunta p {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.571);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 6px;
+    border-radius: 10px;
+    border: 2px solid #eee;
+    outline: none;
+}
+
+.feedback {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.correcto { border-color: #7bed9f !important; }
+.incorrecto { border-color: #ff6b6b !important; }
+
+.seccion-final {
+    display: flex;
+    flex-direction: column;  /* Alinea el error y el botón uno sobre otro */
+    align-items: center;     /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 15px;               /* Espacio entre el mensaje de error y el botón */
+    max-width: 1000px;       /* Ancho máximo según tu ejemplo */
+    margin: 50px auto;       /* Margen lateral automático para centrar el bloque */
+    margin-top: 5px;        /* Espacio superior */
+}
+
+/* Estilo específico para el botón dentro de esa sección */
+.seccion-final .boton-arcoiris {
+    display: inline-block;
+    padding: 15px 40px;      /* Padding generoso para que se vea importante */
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;            /* Quitamos el borde por defecto del button */
+    cursor: pointer;
+    background: rgba(197, 250, 253, 0.434);
+    background-size: 600% 600%;
+    animation: cambioColores 5s ease infinite;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.seccion-final .boton-arcoiris:hover {
+    transform: scale(1.05);  /* Efecto de agrandado suave al pasar el ratón */
+}
+
+@media (max-width: 768px) {
+    .contenedor-bi-columna {
+        flex-direction: column;
+    }
+    .foto-lado, .texto-lado {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        /* Ajusta el tamaño de la letra para que no se amontone */
+        font-size: 1.5rem;
+        
+        /* Asegura que la imagen se vea completa */
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+        /* Reduce el espacio interno si es necesario */
+        padding: 20px;
+    }
+
+    .contenido {
+        /* Evita que el contenedor tenga márgenes laterales demasiado grandes */
+        width: 100%;
+        padding: 10px;
+    }
+}

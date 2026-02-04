@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I&M</title>
+    
+    <link rel="stylesheet" href="stylePreguntas.css">
+
+</head>
+
+<body>
+
+    <div class= "rectangulo-total">
+        <div class= "contenido">
+            <h1>QUIZ</h1>
+        </div>
+    </div>
+
+    <div class="contenedor-quiz">
+        <div class="bloque-pregunta">
+            <p>¿QUÉ DÍA NOS CONOCIMOS POR PRIMERA VEZ?</p>
+            <input type="text" class="respuesta" data-correcta="23-11-2025" placeholder="02-02-2001">
+            <span class="feedback"></span>
+        </div>
+
+        <div class="bloque-pregunta">
+            <p>¿QUÉ DÍA QUEDAMOS POR PRIMERA VEZ?</p>
+            <input type="text" class="respuesta" data-correcta="20-12-2025" placeholder="02-12-2001">
+            <span class="feedback"></span>
+        </div>
+
+        <div class="bloque-pregunta">
+            <p>¿DÓNDE FUIMOS A COMER NUESTRA PRIMERA VEZ?</p>
+            <input type="text" class="respuesta" data-correcta="CHACA BURGUER" placeholder="KFC">
+            <span class="feedback"></span>
+        </div>
+
+        <div class="bloque-pregunta">
+            <p>¿QUÉ DÍA ES HOY?</p>
+            <input type="text" class="respuesta" data-correcta="10-02-2026" placeholder="18-06-2020">
+            <span class="feedback"></span>
+        </div>
+
+        <div class="seccion-final">
+            <p id="error-general" style="color: #ff2e2ec1; font-weight: bold;"></p>
+            <button onclick="verificarTodo()" class="boton-arcoiris">COMPROBAR Y CONTINUAR</button>
+        </div>
+    </div>
+
+    <script src="funciones.js"></script>
+</body>
+
+</html>

@@ -2,6 +2,11 @@
 .body-animacion {
     margin: 0;
     overflow: hidden; /* Evita que aparezca scroll mientras caen los corazones */
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('nubes.jpg');
+    background-size: cover;       /* Estira la imagen para cubrir toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen si es pequeña */
+    background-attachment: fixed; /* La imagen se queda quieta al fondo */
     background-color: #fff2f2; /* Color suave de fondo */
     display: flex;
     justify-content: center;
@@ -39,5 +44,36 @@
 @keyframes caer {
     to {
         transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-bi-columna {
+        flex-direction: column;
+    }
+    .foto-lado, .texto-lado {
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        /* Ajusta el tamaño de la letra para que no se amontone */
+        font-size: 1.5rem; 
+        
+        /* Asegura que la imagen se vea completa */
+        background-size: contain; 
+        background-repeat: no-repeat;
+        
+        /* Reduce el espacio interno si es necesario */
+        padding: 20px;
+    }
+
+    .contenido {
+        /* Evita que el contenedor tenga márgenes laterales demasiado grandes */
+        width: 100%;
+        padding: 10px;
     }
 }
