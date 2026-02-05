@@ -10,18 +10,20 @@
     background-color: #fff2f2; /* Color suave de fondo */
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
 }
 
 /* Estilo de la fecha central */
-.fecha-final {
+.fecha-final{
     text-align: center;
-    z-index: 10; /* Para que esté por encima de los corazones */
+    z-index: 10;
     background: white;
     padding: 30px 60px;
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 50px; /* <--- ESTO crea el espacio para el texto */
 }
 
 .fecha-final h1 {
@@ -29,6 +31,37 @@
     font-size: 3rem;
     color: #fd4f4f;
     margin: 0;
+    
+}
+
+.retorno{
+    display: flex;       /* Usamos flex para centrar el botón fácilmente */
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;    /* Espacio extra por si el margin-bottom no fuera suficiente */
+    position: relative;
+    z-index: 10;
+
+}
+
+.boton-r{
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #fd4f4f;      /* Mismo color que el título para que combine */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #fd4f4f;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    padding-top: 10px;
+}
+
+.boton-r:hover {
+    background: #fd4f4f;
+    color: white;
+    transform: translateY(-3px); /* Efecto de flotar al pasar el ratón */
 }
 
 /* Los corazones que caen */
