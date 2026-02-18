@@ -92,6 +92,13 @@ body {
     padding-right: 30px;    /* Este es el espacio real de separación */
 }
 
+.foto-derecha {
+    flex: 1;                /* Ocupa exactamente el 50% */
+    display: flex;
+    justify-content: flex-end; /* Empuja la foto hacia el centro */
+    padding-left: 30px;    /* Este es el espacio real de separación */
+}
+
 /* Columna de la Derecha (Texto) */
 .texto {
     flex: 1;                /* Ocupa exactamente el 50% */
@@ -99,6 +106,22 @@ body {
     flex-direction: column;
     justify-content: flex-start; /* Empuja el texto hacia el centro */
     padding-left: 30px;     /* Este es el espacio real de separación */
+    text-align: justify;
+    background-color: #ffffffbe;
+    background-size: cover;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.texto-izquierda {
+    flex: 1;                /* Ocupa exactamente el 50% */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Empuja el texto hacia el centro */
+    padding-right: 30px;     /* Este es el espacio real de separación */
     text-align: justify;
     background-color: #ffffffbe;
     background-size: cover;
@@ -122,6 +145,17 @@ body {
     transform: rotate(-2deg);
 }
 
+.foto-derecha img {
+    max-width: 480px;       /* Tamaño máximo de la foto */
+    width: 100%;
+    height: auto;
+    border: 12px solid #a67c52;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+}
 /* Responsivo para móviles */
 @media (max-width: 768px) {
     .contenedor-bi-columna {
